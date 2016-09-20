@@ -1,55 +1,65 @@
-//
-//  main.cpp
-//  Quiz
-//
-//  Created by Samuel Silva on 14/06/16.
-//  Copyright (c) 2016 Samuel Silva. All rights reserved.
-//
-
 #include <iostream>
 #include <string>
+#include <fstream>
+
+#include "Quiz.h"
+
+using namespace std;
+std::ofstream myfile("perguntas.txt",ios::app );
 
 
-using std::cin;
-using std::cout;
-using std::endl;
+void iniciarQuiz(Quiz * &c){
+				c->getPerguntas();
+				c->iniciar();
+				
+	
+}
 
-class Quiz{
-public:
-    std::string comando;
-    std::string alternativa_correta;
+main(){                               
+	Quiz * q = new Quiz();
+	string text, a1,b1,c1,d1,re;
+	int continua=0;
+	while (continua ==0 ) {
+		cout << "1)Jogar"<< endl;
+		cout << "2)Acrescentar pergunta" <<endl;
+		cout << "3)Sair" << endl;
+		int op;
+		cin>>op;
+		switch(op){
+			case 1:
+				iniciarQuiz(q);
+				break;
+			case 2:
+				myfile << "Questao\n";
+						   		cin.ignore();
+								cout << "Digite comando da questao: "<<endl;
+								getline (cin,text);
+			   					myfile << text <<"\n";
+							    cout << "Digite a alternativa A " << endl;
+			   			  		getline (cin,a1) ;
+								myfile << "a)" <<a1<<"\n";
+								cout << "Digite a alternativa B " << endl;
+			   			  		getline (cin,b1) ;
+								myfile << "b)" <<b1<<"\n";
+								cout << "Digite a alternativa C " << endl;
+			   			  		getline (cin,c1) ;
+								myfile << "c)" <<c1<<"\n";
+								cout << "Digite a alternativa D " << endl;
+			   			  		getline (cin,d1) ;
+								myfile << "d)" <<d1<<"\n";
+								cout << "Digite a letra da alternatica correta ( em maiusculo) " << endl;
+			   			  		getline (cin,re) ;
+								myfile <<re<<"\n";
 
-};
+								break;
+			case 3:
+			continua=1;
+			break;
+				
+		}
 
-int main() {
-    // Instanciações
-    Quiz questao1;
-    Quiz questao2;
-    
-    questao1.comando = "Como é possivel comparar numeros inteiros em C++?\na - compare()\nb - ==\nc - !=\nd - strcmp()\ne - >=";
-    questao1.alternativa_correta = "b";
-
-    questao2.comando = "Pra que serve o std::cin?\na - Entrada de Dados\nb - Saída de dados\nc - Comparação\nd -Construtor\ne - Exibir erros";
-    questao2.alternativa_correta = "a";
-    
-    // Fim das Instanciações
-    
-    Quiz perguntas[2] = {questao1, questao2};
-    
-    int i;
-    for (i=0; i<=2; i++) {
-
-        cout << perguntas[i].comando << endl;
-        
-        std::string resposta;
-        cin >> resposta;
-        
-        if (perguntas[i].alternativa_correta.compare(resposta) == 0){
-            cout << "Certo" << endl;
-        }else{
-            cout << "errado" << endl;
-        }
-    }
-
-    return 0;
+system("cls");	
+}
+delete q;
+return 0;
 }

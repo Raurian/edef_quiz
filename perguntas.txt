@@ -1,0 +1,28 @@
+Questao
+Dengue, chikungunya e zika sao doencas que tem sido bastante veiculadas nos noticiarios nos ultimos meses, no Brasil, e se tornado alvo de muitas acoes de combate e controle por parte das autoridades publicas relacionadas a saude. Essas tres doencas possuem em comum o fato de
+a) serem causadas por bacterias
+b) terem o tratamento limitado ao repouso
+c) provocarem a microcefalia em fetos
+d) serem transmitidas pelo mesmo vetor
+D
+Questao
+O setor de uma empresa enviou os seus 10 funcionarios para participarem de um curso sobre a utilização de um sistema de preenchimento de relatorios. Ao final do curso, todos os funcionarios passaram a utilizar o sistema no mesmo ritmo, isto e, cada um passou a preencher a mesma quantidade de relatorios por hora, cada 4 funcionarios preenchem 48 relatorios em 6 horas. Apos o curso, em quantas horas 8 funcionarios preencheriam 96 relatorios
+a) 3
+b) 12
+c) 4
+d) 6
+D
+Questao
+Um computador busca a primeira instrução na memoria e decodifica para determinar seus operandos e as operações a serem executadas com eles. Depois disso, ele as executa e ainda na sequencia ele busca, decodifica e executa as instrucoes subsequentes. Isso e repetido ate que o programa pare de executar. Essa sequencia e tecnicamente conhecida como
+a) ciclo da CPU
+b) busca em memoria
+c) indexacao de disco
+d) descarga de cache
+A
+Questao
+Assinale, das alternativas abaixo, a unica que NAO identifica corretamente um equipamento tipico das redes de computadores 
+a) Switch
+b) Bridge
+c) Speaker
+d) Gateway
+C
